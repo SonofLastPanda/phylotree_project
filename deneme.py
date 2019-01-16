@@ -36,5 +36,29 @@ while second.is_root()==False:
     second=second.up
 print (previous2)
 
+subtree1=previous1.get_leaves()
+subtree2=previous2.get_leaves()
+
+statisticfor1=open("statisticfor1.csv", "w")
+statisticfor2=open("statisticfor2.csv", "w")
+sum=0
+statisticfor1.write("Leaf name"+"\t"+"Distance")
+for i in range(len(subtree1)):
+    x=neww.get_distance(subtree1[i])
+    sum=sum+x
+    statisticfor1.write(str(subtree1[i])+"\t"+str(x))
+
+statisticfor1.write(str(sum))
+
+sum1=0
+statisticfor2.write("Leaf name"+"\t"+"Distance")
+for i in range(len(subtree2)):
+    y=neww.get_distance(subtree2[i])
+    sum1=sum1+y
+    statisticfor2.write(str(subtree2[i])+"\t"+str(y))
+
+statisticfor2.write(str(sum1))
+
+
 
 
