@@ -8,7 +8,7 @@ leaf1=input("Enter a leaf name: ")
 leaf2=input("Enter another leaf name: ")
 
 newtree=t.get_common_ancestor(leaf1, leaf2)
-print (newtree)
+#print (newtree)
 
 newtree.write(outfile="commontree.nwk")
 
@@ -29,36 +29,24 @@ for i in range(len(leaves)):
 while first.is_root()==False:
     previous1=first
     first=first.up
-print (previous1)
+#print (previous1)
 
 while second.is_root()==False:
     previous2=second
     second=second.up
-print (previous2)
+#print (previous2)
 
 subtree1=previous1.get_leaves()
 subtree2=previous2.get_leaves()
 
 statisticfor1=open("statisticfor1.csv", "w")
 statisticfor2=open("statisticfor2.csv", "w")
-sum=0
-statisticfor1.write("Leaf name"+"\t"+"Distance")
+s=open("s.csv", "w")
+s.write("Leaf name"+"\t"+"Distance"+"\t"+"subtree")
 for i in range(len(subtree1)):
     x=neww.get_distance(subtree1[i])
-    sum=sum+x
-    statisticfor1.write(str(subtree1[i])+"\t"+str(x))
+    s.write(str(subtree1[i])+"\t"+str(x)+"\t"+"1")
 
-statisticfor1.write(str(sum))
-
-sum1=0
-statisticfor2.write("Leaf name"+"\t"+"Distance")
 for i in range(len(subtree2)):
     y=neww.get_distance(subtree2[i])
-    sum1=sum1+y
-    statisticfor2.write(str(subtree2[i])+"\t"+str(y))
-
-statisticfor2.write(str(sum1))
-
-
-
-
+    s.write(str(subtree2[i])+"\t"+str(y)+"\t"+"2")
