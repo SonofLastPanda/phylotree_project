@@ -8,4 +8,4 @@
     >t-test is applied.
 
 ## 2)Find all leaves' pair distances between two subtrees.For this data apply t-test for all distance points.
-    In find_dist.py, first pair-wise distances of leaves of two subtrees of common ancestor of user-given two leafes are found, then t-test is applied to two resulting arrays that contains pair-wise distances of subtrees.
+    In find_dist.py, first pair-wise distances of leaves of two subtrees of common ancestor of user-given two leafes are found, then t-test is applied to two resulting arrays that contains pair-wise distances of subtrees. In order to see whether the code works, the algorithm is applied to two different trees.
