@@ -2,8 +2,7 @@ from ete3 import Tree, TreeStyle,TextFace, NodeStyle
 from scipy import stats
 import statistics
 
-#to-do:
-#FINAL STEP: bunları GUIye dökmek
+
 
 def get_ancestor_subtree(tree,node1,node2):
     anc=tree.get_common_ancestor(node1, node2)
@@ -100,7 +99,7 @@ else:
 
 stat=stats.ttest_ind(diff_1,diff_2)
 
-print(stat.pvalue) #mean ve median ekle
+print(stat.pvalue) 
 print("Median of first set is: "+ str(statistics.median(diff_1)) +" " + "Median of second set is: " + str(statistics.median(diff_2)) )
 print("Mean of first set is: "+ str(statistics.mean(diff_1)) + " " + "Mean of second set is: " + str(statistics.mean(diff_2)) )
 #print(stat.statistic)
